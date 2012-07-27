@@ -16,9 +16,9 @@ $(document).ready(function(){
 			var html ='';
 			for(var key in validator.sumitted){
 				var label =$('label[for^="'+ key +'"]').not('[generated]');
-				var legend = label.closest('fieldset').find('.ui-fieldcontion-label');
+				var legend = label.closest('fieldset').find('.ui-controlgroup-label');
 				var fieldName = legend.length ? legend.text() : label.text();
-				html += 'li' + fieldName +'/li';
+				html += '<li>' + fieldName +'</li>';
 			};
 			$("#bookerrors ul").html(html);
 		},
