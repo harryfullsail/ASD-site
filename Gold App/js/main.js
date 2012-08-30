@@ -1,6 +1,6 @@
 // write your javascript in here
 // ASD Project 1
-// Harry D Lee 7/12
+// Harry D Lee 9/12
 // main.js
 
 // Wait until the DON is ready.
