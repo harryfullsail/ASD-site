@@ -1,12 +1,11 @@
 $(function(){
 	
 	$.ajax({
-		url: 'xhr/list.php',
+		//url: 'xhr/list.php',
 		type: 'GET',
-		dataType: 'json',
+		dataType: 'XML',
 		success: function(response){
-			console.log(response);
-				
+		//	console.log(response);
 		}
 	});
 });

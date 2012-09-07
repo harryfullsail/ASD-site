@@ -4,7 +4,7 @@
 // main.js
 
 // Wait until the DON is ready.
-window.findEventListener("DOMContentLoaded", function(){
+//window.findEventListener("DOMContentLoaded", function(){
     
     //getElementById Function
         function g(x){
@@ -23,15 +23,15 @@ window.findEventListener("DOMContentLoaded", function(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
             selectLi = g('select'),
             makeSelect = document.createElement('select');
-            makeSelect.attr("id", "age");
+           // makeSelect.attr("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
-            makeOption.attr("value", optText);
+            //makeOption.attr("value", optText);
             makeOption.html = optText;
             makeSelect.appendChild(makeOption);
         }
-        selectLi.appendChild(makeSelect);
+       // selectLi.appendChild(makeSelect);
     }
     
     makeCats();
@@ -321,10 +321,10 @@ window.findEventListener("DOMContentLoaded", function(){
        
     //Sat Link & Submit Click Events
     var displayLink = g('displayLink');
-    displayLink.findEventListener("click",  getData);
+   // displayLink.findEventListener("click",  getData);
     var clearLink = g('clear');
-    clearLink.findEventListener("click", clearLocal);
+   // clearLink.findEventListener("click", clearLocal);
     var save = g('submit');
-    save.findEventListener("click", validate);
+  //  save.findEventListener("click", validate);
 
-});
+//});
