@@ -1,10 +1,10 @@
 // write your javascript in here
 // ASD Project 1
-// Harry D Lee 7/12
+// Harry D Lee 9/2012
 // main.js
 
 // Wait until the DON is ready.
-window.findEventListener("DOMContentLoaded", function(){
+//window.findEventListener("DOMContentLoaded", function(){
     
     //getElementById Function
         function g(x){
@@ -23,15 +23,15 @@ window.findEventListener("DOMContentLoaded", function(){
         var formTag = document.getElementsByTagName("form"), // this is a array of all the from tags.
             selectLi = g('select'),
             makeSelect = document.createElement('select');
-            makeSelect.setAttribute("id", "age");
+           // makeSelect.attr("id", "age");
         for(var i=0, j=ageGroup.length; i<j; i++){
             var makeOption = document.createElement('option');
             var optText = ageGroup[i];
-            makeOption.setAttribute("value", optText);
+            //makeOption.attr("value", optText);
             makeOption.html = optText;
             makeSelect.appendChild(makeOption);
         }
-        selectLi.appendChild(makeSelect);
+       // selectLi.appendChild(makeSelect);
     }
     
     makeCats();
@@ -107,7 +107,7 @@ window.findEventListener("DOMContentLoaded", function(){
         var imageLi = document.createElement('li');
         makeSubList.appendChild(imageLi);
         var newImg = document.createElement('img');
-        var setSrc = newImg.setAttribute("src", "images/"+ catName + ".png");
+        var setSrc = newImg.attr("src", "images/"+ catName + ".png");
         imageLi.appendChild(newImg);
     }
     
@@ -130,7 +130,7 @@ window.findEventListener("DOMContentLoaded", function(){
         
         //Write Date from local storage to the browser.
         var makeDiv = document.createElement('div');
-        makeDiv.setAttribute("id", "items");
+        makeDiv.attr("id", "items");
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
@@ -181,9 +181,9 @@ window.findEventListener("DOMContentLoaded", function(){
         var checkbox = document.forms(0).genre;
         for (var i=0; i<checkbox.length; i++){
             if(checkbox[i].value == "Fiction" && item.genre[1] == "Fiction"){
-                checkbox[i].setAttribute("checked", "checked");
+                checkbox[i].attr("checked", "checked");
             }else if(checkbox[i].value == "Nonfiction" && item.genre[1] == "Nonfiction"){
-                checkbox[i].setAttribute("checked", "checked");
+                checkbox[i].attr("checked", "checked");
             }
         }
         
@@ -309,7 +309,7 @@ window.findEventListener("DOMContentLoaded", function(){
             for(var i=0, j=messageAry.length; i < j; i++){
                 var txt = document.createElement('li');
                 txt.html = messageAry[i];
-                errMsg.appendChild(txt);
+                errMsg.append(txt);
             }
             e.preventDefault();
             return false;
@@ -321,10 +321,10 @@ window.findEventListener("DOMContentLoaded", function(){
        
     //Sat Link & Submit Click Events
     var displayLink = g('displayLink');
-    displayLink.findEventListener("click",  getData);
+   // displayLink.findEventListener("click",  getData);
     var clearLink = g('clear');
-    clearLink.findEventListener("click", clearLocal);
+   // clearLink.findEventListener("click", clearLocal);
     var save = g('submit');
-    save.findEventListener("click", validate);
+  //  save.findEventListener("click", validate);
 
-});
+//});
